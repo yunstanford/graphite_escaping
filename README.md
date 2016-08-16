@@ -16,6 +16,18 @@ Preferred Naming metrics schema:
 	<namespace>.<instrumented section>.<target (noun)>.<action (past tense verb)>
 ```
 
+## Usage
+
+1. To Graphite 
+'''
+	function: metrics_name_to_graphite(original_name) => Valid Graphite Metric Name
+'''
+
+2. From Graphite
+'''
+	function: metrics_name_from_graphite(valid_graphite_metric_name) => Original Name
+'''
+
 
 ## Limitation and explaination:
 
