@@ -18,12 +18,11 @@ Preferred Naming metrics schema:
 
 ## Usage
 
-1. To Graphite 
+To Graphite 
 ```
 	function: metrics_name_to_graphite(original_name) => Valid Graphite Metric Name
 ```
-
-2. From Graphite
+From Graphite
 ```
 	function: metrics_name_from_graphite(valid_graphite_metric_name) => Original Name
 ```
