@@ -49,8 +49,8 @@ FAIL CASES:
 1. 	The dot (.) is a special character because it delineates each metric’s path component, 
 	but this is an easy fix; just substitute all dots for underscores or '%2E'. 
 	For example, www.zillow.com => www_zillow_com
-	
-2   For the rest of the special characters(except dot), just URL any metric name with 
+
+2.  For the rest of the special characters(except dot), just URL any metric name with 
 	special characters to make it valid for Graphite, and then URL decode it when we need to
 	reconstruct the information
 
