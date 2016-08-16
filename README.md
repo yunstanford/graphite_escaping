@@ -11,9 +11,10 @@ So any special name not allow to appear in directory/file name is not supported 
 		\ back slash	blank spaces			@ at sign
 
 
-Naming metrics schema:
+Preferred Naming metrics schema:
+```
 	<namespace>.<instrumented section>.<target (noun)>.<action (past tense verb)>
-
+```
 
 
 ## Limitation and explaination:
@@ -36,9 +37,10 @@ for example, the final string could exceed the 63-character limit of a DNS name.
 in an internationalized domain name.
 
 FAIL CASES:
-'.fd': starting with 'dot'
-'a..a': continuous 'dot'
-very long string: exceed the 63-character
+
+1. '.fd': starting with 'dot' 
+2. 'a..a': continuous 'dot'
+3. very long string: exceed the 63-character
 
 
 
@@ -47,6 +49,7 @@ very long string: exceed the 63-character
 1. 	The dot (.) is a special character because it delineates each metric’s path component, 
 	but this is an easy fix; just substitute all dots for underscores or '%2E'. 
 	For example, www.zillow.com => www_zillow_com
+	
 2   For the rest of the special characters(except dot), just URL any metric name with 
 	special characters to make it valid for Graphite, and then URL decode it when we need to
 	reconstruct the information
@@ -54,6 +57,8 @@ very long string: exceed the 63-character
 
 ## Test
 
+```
 python test.py
+```
 
 
