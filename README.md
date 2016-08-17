@@ -3,13 +3,6 @@
 Graphite expects everything to be just ASCII to split/processing them, and then make directories based on metric name.
 So any special name not allow to appear in directory/file name is not supported by Graphite.
 
-		# pound			< left angle bracket	$ dollar sign			+ plus sign
-		% percent		> right angle bracket	! exclamation point		` backtick
-		& ampersand		* asterisk				‘ single quotes			| pipe
-		{ left bracket	? question mark			“ double quotes			= equal sign
-		} right bracket	/ forward slash			: colon	 
-		\ back slash	blank spaces			@ at sign
-
 
 Preferred Naming metrics schema:
 ```
