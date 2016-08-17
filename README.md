@@ -70,6 +70,8 @@ FAIL CASES:
 
 ```
 python test.py
+or 
+py.test
 ```
 
 
