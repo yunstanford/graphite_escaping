@@ -61,10 +61,8 @@ def metrics_name_to_graphite(section_name):
 		@param:   Section Name  (could include any character)
 		@return:  valid metric name for graphite
 	"""
-	# section_name = section_name.replace(".", "_")
 	valid_graphite_metric_name = ""
 	try:
-		# valid_graphite_metric_name = urllib.quote(unicode(section_name, 'utf-8').encode('idna'))
 		valid_graphite_metric_name = urllib.quote(unicode(section_name, 'utf-8').encode('idna')).replace(".", "%2E")
 	except Exception, e:
 		raise e

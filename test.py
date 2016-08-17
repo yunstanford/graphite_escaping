@@ -6,8 +6,6 @@ from simple_color_print import bcolors
 
 
 def test_consistency(name):
-
-	# if metrics_name_from_graphite(metrics_name_to_graphite(name)) == name.replace(".", "_"):
 	assert type(metrics_name_from_graphite(metrics_name_to_graphite(name))) == type(name), 'inconsistent object type'
 	if metrics_name_from_graphite(metrics_name_to_graphite(name)) == name:
 		return True
@@ -16,10 +14,8 @@ def test_consistency(name):
 
 def colored_print(status):
 	if status:
-		# print "Test Consistency: ", bcolors.OKGREEN + "PASS" + bcolors.ENDC
 		print "Test Consistency: ", bcolors.green_print("PASS")
 	else:
-		# print "Test Consistency: ", bcolors.WARNING + "FAIL" + bcolors.ENDC
 		print "Test Consistency: ", bcolors.red_print("FAIL")
 
 
